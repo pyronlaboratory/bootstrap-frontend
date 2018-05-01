@@ -1,0 +1,869 @@
+<!Doctype>
+<html lang="en">
+<head>
+	 <meta charset="utf-8" />
+	 <title>Creative.Ronnie's project</title>
+	 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+     <meta name="viewport" content="width=device-width" />
+	 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+
+	 <!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	 <!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<script>  $(function() {
+                $('#navigation a').stop().animate({'marginLeft':'-55px'},1000);
+
+                $('#navigation > li').hover(
+                    function () {
+                        $('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
+                    },
+                    function () {
+                        $('a',$(this)).stop().animate({'marginLeft':'-55px'},200);
+                    }
+                );
+            });</script>
+		
+		
+		<style>
+		
+		body { 
+		background: url('Images/bg1.svg') no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		}
+		#navTopRight{
+		font-family: 'Pacifico', cursive;
+		font-size: 25px;
+		text-align: right;
+		}
+		h1{
+		font-family: 'Pacifico', cursive;
+		font-size: 125px;
+		text-align: center;
+		}
+		
+		
+		ul#navigation {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 10px;
+    left: 0px;
+    list-style: none;
+    z-index:9999;
+}
+span{font-size:1.3em !important;}
+span i{font-size:1.5em !important; padding-top:15px !important ;}
+
+
+
+ul#navigation li  {
+    width: 100px;
+}
+
+ul#navigation li a {
+    display: block;
+	padding-left:55px;
+    margin-left:-2px;
+    width: 100px;
+    height: 70px;    
+    background-color:#CFCFCF;
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:1px solid #AFAFAF;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    /*-moz-box-shadow: 0px 4px 3px #000;
+    -webkit-box-shadow: 0px 4px 3px #000;
+    */
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+
+		</style>
+		
+		<style>@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        : Aether
+Version		: 1.0
+Last change	: 2015/03/27
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General Structure
+2. Anchor Link
+3. Text Outside the Box
+4. Main Form
+5. Login Button
+6. Form Invalid
+7. Form - Main Message
+8. Custom Checkbox & Radio
+9. Misc
+-------------------------------------------------------------------*/
+
+/*=== 2. Anchor Link ===*/
+a {
+  transition: all ease-in-out 200ms;
+}
+
+/*=== 3. Text Outside the Box ===*/
+.etc-login-form {
+  color: #919191;
+  padding: 10px 20px;
+}
+.etc-login-form p {
+  margin-bottom: 5px;
+}
+/*=== 4. Main Form ===*/
+.login-form-1 {
+  max-width: 300px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.main-login-form {
+  position: relative;
+}
+.login-form-1 .form-control {
+  border: 0;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555555;
+  padding: 7px 0;
+  font-weight: bold;
+  height:auto;
+}
+.login-form-1 .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-control:-moz-placeholder,
+.login-form-1 .form-control::-moz-placeholder,
+.login-form-1 .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+.login-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+.login-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.login-group-checkbox {
+  padding: 5px 0;
+}
+/*=== 5. Login Button ===*/
+.login-form-1 .login-button {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  background: #ffffff;
+  color: #999999;
+  padding: 11px 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border: 5px solid #efefef;
+  border-radius: 50%;
+  transition: all ease-in-out 500ms;
+}
+.login-form-1 .login-button:hover {
+  color: #555555;
+  transform: rotate(450deg);
+}
+.login-form-1 .login-button.clicked {
+  color: #555555;
+}
+.login-form-1 .login-button.clicked:hover {
+  transform: none;
+}
+.login-form-1 .login-button.clicked.success {
+  color: #2ecc71;
+}
+.login-form-1 .login-button.clicked.error {
+  color: #e74c3c;
+}
+/*=== 6. Form Invalid ===*/
+label.form-invalid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  display: block;
+  margin-top: -25px;
+  padding: 7px 9px;
+  background: #777777;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+label.form-invalid:after {
+  top: 100%;
+  right: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #777777;
+  border-width: 6px;
+}
+/*=== 7. Form - Main Message ===*/
+.login-form-main-message {
+  background: #ffffff;
+  color: #999999;
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  height: 0;
+  padding: 0 20px 0 17px;
+  opacity: 0;
+  transition: all ease-in-out 200ms;
+}
+.login-form-main-message.show {
+  height: auto;
+  opacity: 1;
+  padding: 10px 20px 10px 17px;
+}
+.login-form-main-message.success {
+  border-left-color: #2ecc71;
+}
+.login-form-main-message.error {
+  border-left-color: #e74c3c;
+}
+/*=== 8. Custom Checkbox & Radio ===*/
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  padding-top: 1px;
+  cursor: pointer;
+}
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 17px;
+  height: 17px;
+  border: 0px solid #aaa;
+  background: #f0f0f0;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  position: absolute;
+  color: #555555;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #8c8c8c;
+  background-color: #878787;
+}
+[type="checkbox"]:disabled:checked + label:after,
+[type="radio"]:disabled:checked + label:after {
+  color: #555555;
+}
+[type="checkbox"]:disabled + label,
+[type="radio"]:disabled + label {
+  color: #8c8c8c;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before,
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #f6f6f6;
+}
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #f6f6f6 !important;
+}
+/*=== Customization ===*/
+/* radio aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  border-radius: 3px;
+}
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  border-radius: 35px;
+}
+/* selected mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  top: 0;
+  left: 2px;
+  font-size: 14px;
+}
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '\2022';
+  top: 0;
+  left: 3px;
+  font-size: 30px;
+  line-height: 25px;
+}
+/*=== 9. Misc ===*/
+.logo {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 950px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}</style>
+	
+<style>.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }</style>	
+</head>
+
+<body>
+
+
+<div class="container">
+	<ul id="navigation">
+            <li class="rocket"><a href="" title="Launch Explore"><span>..<i class="fa fa-rocket"></i></span></a></li>
+            <li class="globe"><a href="" title="The Big Idea"><span>..<i class="fa fa-globe"></i></span></a></li>
+            <li class="laptop"><a href="" title="Blogspace"><span>..<i class="fa fa-laptop"></i></span></a></li>
+            <li class="contact"><a href="" title="Ask Our Guru"><span>..<i class="fa fa-commenting"></i></span></a></li>
+			<li class="settings"><a href="" title="Settings"><span>..<i class="fa fa-wrench"></i></span></a></li>
+			<li class="search"><a href="" title="Search our station"><span>..<i class="fa fa-search"></i></span></a></li>
+	</ul>
+	 <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navTopRight">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="login"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+			  </li>
+		  </ul>
+	  </div>
+
+	  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<!-- LOGIN FORM -->
+<div class="text-center" style="padding:50px 0">
+    <div class="logo" id="login">login</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="login-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="lg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="lg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+					</div>
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" id="lg_remember" name="lg_remember">
+						<label for="lg_remember">remember</label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>forgot your password? <a href="#forgetPassword">click here</a></p>
+				<p>new user? <a href="#register">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
+<!-- REGISTRATION FORM -->
+<div class="text-center" style="padding:50px 0" >
+	<div class="logo" id="register">register</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="register-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+					</div>
+					<div class="form-group">
+						<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+						<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+					</div>
+					
+					<div class="form-group">
+						<label for="reg_email" class="sr-only">Email</label>
+						<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">Full Name</label>
+						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+						<label for="male">male</label>
+						
+						<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+						<label for="female">female</label>
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a href="#">terms</a></label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#login">login here</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
+<!-- FORGOT PASSWORD FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo" id="forgetPassword">forgot password</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="forgot-password-form" class="text-left">
+			<div class="etc-login-form">
+				<p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+			</div>
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="fp_email" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#login">login here</a></p>
+				<p>new user? <a href="#register">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+				</div>
+			</div>
+		  </div>
+          
+          
+          
+<script>
+    (function($) {
+    "use strict";
+    
+	// Options for Message
+	//----------------------------------------------
+  var options = {
+	  'btn-loading': '<i class="fa fa-spinner fa-pulse"></i>',
+	  'btn-success': '<i class="fa fa-check"></i>',
+	  'btn-error': '<i class="fa fa-remove"></i>',
+	  'msg-success': 'All Good! Redirecting...',
+	  'msg-error': 'Wrong login credentials!',
+	  'useAJAX': true,
+  };
+
+	// Login Form
+	//----------------------------------------------
+	// Validation
+  $("#login-form").validate({
+  	rules: {
+      lg_username: "required",
+  	  lg_password: "required",
+    },
+  	errorClass: "form-invalid"
+  });
+  
+	// Form Submission
+  $("#login-form").submit(function() {
+  	remove_loading($(this));
+		
+		if(options['useAJAX'] == true)
+		{
+			// Dummy AJAX request (Replace this with your AJAX code)
+		  // If you don't want to use AJAX, remove this
+  	  dummy_submit_form($(this));
+		
+		  // Cancel the normal submission.
+		  // If you don't want to use AJAX, remove this
+  	  return false;
+		}
+  });
+	
+	// Register Form
+	//----------------------------------------------
+	// Validation
+  $("#register-form").validate({
+  	rules: {
+      reg_username: "required",
+  	  reg_password: {
+  			required: true,
+  			minlength: 5
+  		},
+   		reg_password_confirm: {
+  			required: true,
+  			minlength: 5,
+  			equalTo: "#register-form [name=reg_password]"
+  		},
+  		reg_email: {
+  	    required: true,
+  			email: true
+  		},
+  		reg_agree: "required",
+    },
+	  errorClass: "form-invalid",
+	  errorPlacement: function( label, element ) {
+	    if( element.attr( "type" ) === "checkbox" || element.attr( "type" ) === "radio" ) {
+    		element.parent().append( label ); // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
+	    }
+			else {
+  	  	label.insertAfter( element ); // standard behaviour
+  	  }
+    }
+  });
+
+  // Form Submission
+  $("#register-form").submit(function() {
+  	remove_loading($(this));
+		
+		if(options['useAJAX'] == true)
+		{
+			// Dummy AJAX request (Replace this with your AJAX code)
+		  // If you don't want to use AJAX, remove this
+  	  dummy_submit_form($(this));
+		
+		  // Cancel the normal submission.
+		  // If you don't want to use AJAX, remove this
+  	  return false;
+		}
+  });
+
+	// Forgot Password Form
+	//----------------------------------------------
+	// Validation
+  $("#forgot-password-form").validate({
+  	rules: {
+      fp_email: "required",
+    },
+  	errorClass: "form-invalid"
+  });
+  
+	// Form Submission
+  $("#forgot-password-form").submit(function() {
+  	remove_loading($(this));
+		
+		if(options['useAJAX'] == true)
+		{
+			// Dummy AJAX request (Replace this with your AJAX code)
+		  // If you don't want to use AJAX, remove this
+  	  dummy_submit_form($(this));
+		
+		  // Cancel the normal submission.
+		  // If you don't want to use AJAX, remove this
+  	  return false;
+		}
+  });
+
+	// Loading
+	//----------------------------------------------
+  function remove_loading($form)
+  {
+  	$form.find('[type=submit]').removeClass('error success');
+  	$form.find('.login-form-main-message').removeClass('show error success').html('');
+  }
+
+  function form_loading($form)
+  {
+    $form.find('[type=submit]').addClass('clicked').html(options['btn-loading']);
+  }
+  
+  function form_success($form)
+  {
+	  $form.find('[type=submit]').addClass('success').html(options['btn-success']);
+	  $form.find('.login-form-main-message').addClass('show success').html(options['msg-success']);
+  }
+
+  function form_failed($form)
+  {
+  	$form.find('[type=submit]').addClass('error').html(options['btn-error']);
+  	$form.find('.login-form-main-message').addClass('show error').html(options['msg-error']);
+  }
+
+	// Dummy Submit Form (Remove this)
+	//----------------------------------------------
+	// This is just a dummy form submission. You should use your AJAX function or remove this function if you are not using AJAX.
+  function dummy_submit_form($form)
+  {
+  	if($form.valid())
+  	{
+  		form_loading($form);
+  		
+  		setTimeout(function() {
+  			form_success($form);
+  		}, 2000);
+  	}
+  }
+	
+})(jQuery);
+</script>
+
+	  
+</div>
+	<h1> You </h1>
+	<br>
+	<h1>like to explore</h1>
+	<br>
+	<h1> dude?</h1>
+	<br>
+
+</div>
+
+<div class="container">
+
+        <div class="text-center center-block">
+            
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+				<p>Copyrights@2016 Ronnie's Inc.</p>
+        </div>
+</div>
+
+
+</body>
+</html>
+
+
+<!--
+		.topspace{
+			margin:100px auto;
+			width:805px;
+		}
+
+
+		<script src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/jquery.js"></script>
+		<script src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/amazingslider.js"></script>
+		<script src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/initslider-1.js"></script>
+		
+		
+		
+		<div class"row topspace">
+			<div class"col-md-12">
+			Insert to your webpage where you want to display the slider
+			<div id="amazingslider-1" style="display:block; position:relative; margin: 5px auto;">
+				<ul class="amazingslider-slides" style="display:none;">
+		
+					<li><img src="Images/DeathtoStock_Wired2.jpg" alt="Picture 1" /></li>
+					<li><img src="Images/DeathtoStock_Wired3.jpg" alt="Picture 2" /></li>
+					<li><img src="Images/DeathtoStock_Wired4.jpg" alt="Picture 3" /></li>
+					<li><img src="Images/DeathtoStock_Wired5.jpg" alt="Picture 4" /></li>
+					<li><img src="Images/DeathtoStock_Wired6.jpg" alt="Picture 5" /></li>
+					<li><img src="Images/DeathtoStock_Wired7.jpg" alt="Picture 6" /></li>  
+					<li><img src="Images/DeathtoStock_Wired8.jpg" alt="Picture 8" /></li>
+					<li><img src="Images/DeathtoStock_Wired9.jpg" alt="Picture 9" /></li>
+				</ul>
+			</div>
+			End of body section HTML codes
+			</div>
+		</div>
+	
+	-->

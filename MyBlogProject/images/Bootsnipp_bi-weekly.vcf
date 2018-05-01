@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION;TYPE=WORK:3.0
+FN;CHARSET=UTF-8:Maks Surguy
+N;CHARSET=UTF-8:Maks Surguy;;;;
+PROFILE:VCARD
+ADR;CHARSET=UTF-8:;;Champan Ave;Fullerton;CA;92870;USA
+EMAIL:bootsnipp@gmail.com
+ORG:Bootsnipp
+URL:http://bootsnipp.com
+END:VCARD

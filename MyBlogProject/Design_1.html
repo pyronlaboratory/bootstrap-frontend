@@ -1,0 +1,987 @@
+<!Doctype>
+<html lang="en">
+<head>
+	 <title>Creative.Ronnie's project</title>
+	 
+	 <meta charset="utf-8" />
+	 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+     <meta name="viewport" content="width=device-width" />
+	 
+	 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	 <!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	 <!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script>/* activate scrollspy menu */
+$('body').scrollspy({
+  target: '#navbar-collapsible',
+  offset: 50
+});
+
+/* smooth scrolling sections */
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 1000);
+        return false;
+      }
+    }
+});</script>
+		<style>
+.box > .icon { text-align: center; position: relative; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #337ab7; vertical-align: middle; }
+.box > .icon:hover > .image { background: #333; }
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; padding-top:20px;}
+.box > .icon:hover > .image > i { color: white !important; }
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
+.box > .icon > .info > h3.title { font-family: "Roboto",sans-serif !important; font-size: 24px; color: #222; font-weight: 500; text-align: center; }
+.box > .icon > .info > p { font-family: "Roboto",sans-serif !important; font-size: 16px; color: #666; line-height: 1.5em; margin: 20px; text-align: center;}
+.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
+.box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 14px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; text-align: center; }
+.box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #337ab7; }
+.box .space { height: 30px; }
+		
+		
+		.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+
+	
+		</style>
+		
+<script>$(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
+
+});</script>
+		
+		
+		<script>
+		
+		$(document).ready( function() {
+		$('#myCarousel').carousel({
+		interval:   4000
+		});
+	
+		var clickEvent = false;
+		$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+		}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+		});
+		});
+		
+		</script>
+		
+		
+		<style>.custom-search-form{
+    margin-top:5px;
+	
+}</style>
+		<style>
+
+		#myCarousel .nav a small {
+		display:block;
+		}
+		#myCarousel .nav {
+		background:#eee;
+		}
+		#myCarousel .nav a {
+		border-radius:0px;
+		}
+		
+		h4,h6,li{
+		font-family: 'PT Sans Narrow', sans-serif;
+		font-size: 25px;
+		text-align: right;
+		}
+		h5{
+		font-family: 'PT Sans Narrow', sans-serif;
+		font-size: 56px;
+		text-align: center;
+		color:white;
+		}
+		
+		
+		</style>
+		
+		<style>/* We define our variables (the social brand colors) */
+@social-btn-color: white;
+@social-brand-twitter: #00acee;
+@social-brand-facebook: #3b5998;
+@social-brand-googleplus: #e93f2e;
+@social-brand-stumbleupon: #f74425;
+@social-brand-linkedin: #0e76a8;
+
+.ssb {
+	font-size: 0px; /* Remove the additional margin due to inline-block */
+	.btn {
+		font-size: @font-size-base; /* Reset to default font-size */
+		margin: 5px; /* Adjust spacing */
+		transition: background-color .25s ease; /* Add some fading */
+		border-radius: 0px; /* We want square buttons */
+	}
+}
+
+/* To create buttons, we use the button mixin provided by Boostrap */
+.btn-twitter {
+	.button-variant(@social-btn-color; @social-brand-twitter; @social-brand-twitter;);
+}
+.btn-facebook {
+	.button-variant(@social-btn-color; @social-brand-facebook; @social-brand-facebook;);
+}
+.btn-googleplus {
+	.button-variant(@social-btn-color; @social-brand-googleplus; @social-brand-googleplus;);
+}
+.btn-stumbleupon {
+	.button-variant(@social-btn-color; @social-brand-stumbleupon; @social-brand-stumbleupon;);
+}
+.btn-linkedin {
+	.button-variant(@social-btn-color; @social-brand-linkedin; @social-brand-linkedin;);
+}</style>
+		<link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
+		
+		<style>
+		h1,#featuredArticles{
+		font-family: 'Amatic SC', cursive;
+		font-size: 120px;
+		text-align: center;
+		}
+		
+		</style>
+		
+		<style>.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+  width: 50%;
+  float: left;
+  clear: left;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 95%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  /*border-radius: 2px;*/
+  /*padding: 20px;*/
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  right: -12px;
+  /*background-color: #999999;*/
+  z-index: 100;
+  /*
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  */
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge > a {
+  color: #C5C7C5 !important;
+}
+.timeline-badge a:hover {
+  color: #000 !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+text-align: justified;
+    padding:20px;
+    margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+.timeline-footer{
+    padding:20px;
+    background-color:#f4f4f4;
+}
+.timeline-footer > a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.tooltip{
+
+    position:absolute;
+    z-index:1020;
+    display:block;
+    visibility:visible;
+    padding:5px;
+    font-size:11px;
+    opacity:0;
+    filter:alpha(opacity=0);
+    
+}
+.tooltip.in{
+    /*opacity:0;
+    filter:alpha(opacity=80);*/
+    
+}
+.tooltip.top{
+    margin-top:-2px;
+}
+.tooltip.right{
+    margin-left:2px;
+}
+.tooltip.bottom{
+    margin-top:2px;
+}
+.tooltip.left{
+    margin-left:-2px;
+}
+.tooltip.top .tooltip-arrow{
+    bottom:0;
+    left:0;
+    margin-left:0;
+    border-left:0 solid transparent;
+    border-right:5px solid transparent;
+    border-top:0 solid #000;
+}
+.tooltip.left .tooltip-arrow{
+    bottom:0;
+    left:0;
+    margin-left:0;
+    border-left:0 solid transparent;
+    border-right:5px solid transparent;
+    border-top:0 solid #000;
+}
+.tooltip.bottom .tooltip-arrow{
+    bottom:0;
+    left:0;
+    margin-left:0;
+    border-left:0 solid transparent;
+    border-right:5px solid transparent;
+    border-top:0 solid #000;
+}
+.tooltip.right .tooltip-arrow{
+    bottom:0;
+    left:0;
+    margin-left:0;
+    border-left:0 solid transparent;
+    border-right:5px solid transparent;
+    border-top:0 solid #000;
+}
+.tooltip-inner{
+    width:200px;
+    padding:3px 8px;
+    color:#fff;
+    text-align:center;
+    text-decoration:none;
+    background-color:#313131;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+}
+.tooltip-arrow{
+    position:absolute;
+    width:0;
+    height:0;
+}
+.timeline > li.timeline-inverted{
+  float: right; 
+  clear: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.timeline > li:nth-child(2){
+  margin-top: 60px;
+}
+.timeline > li.timeline-inverted > .timeline-badge{
+  left: -12px;
+}
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li {
+      margin-bottom: 20px;
+      position: relative;
+      width:100%;
+      float: left;
+      clear: left;
+    }
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 28px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+    
+.timeline > li.timeline-inverted{
+  float: left; 
+  clear: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.timeline > li.timeline-inverted > .timeline-badge{
+  left: 28px;
+}
+}</style>
+<style>
+</style>
+<style>
+
+
+#myCarousel2{
+		font-family: 'Amatic SC', cursive;
+		text-align: right;
+		font-size: 36px;
+}
+
+#carousel-text {
+  background: none repeat scroll 0 0 rgba(51, 51, 51, 0.7);
+  bottom: 0;
+  color: #FFFFFF;
+  left: 0;
+  line-height: normal;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  
+}
+.thumbnails {
+ 
+  list-style: none outside none;
+  margin: auto;
+  padding: 20px;
+  
+}
+.thumbnails > li{ display:inline-block;}
+/* Removes the default 20px margin and creates some padding space for the indicators and controls */
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+/* Reposition the controls slightly */
+.carousel-control {
+	left: -12px;
+}
+.carousel-control.right {
+	right: -12px;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+	background: #c0c0c0;
+}
+.carousel-indicators .active {
+background: #333333;
+}
+;</style>
+
+
+<script>
+  jQuery(document).ready(function($) {
+ 
+        $('#myCarousel2').carousel({
+                interval: 5000
+        });
+ 
+        $('#carousel-text').html($('#slide-content-0').html());
+ 
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#myCarousel2').carousel(id);
+        });
+ 
+ 
+        // When the carousel slides, auto update the text
+        $('#myCarousel2').on('slid', function (e) {
+                var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+});
+</script>
+<script>$(document).ready(function(){
+	var my_posts = $("[rel=tooltip]");
+
+	var size = $(window).width();
+	for(i=0;i<my_posts.length;i++){
+		the_post = $(my_posts[i]);
+
+		if(the_post.hasClass('invert') && size >=767 ){
+			the_post.tooltip({ placement: 'left'});
+			the_post.css("cursor","pointer");
+		}else{
+			the_post.tooltip({ placement: 'rigth'});
+			the_post.css("cursor","pointer");
+		}
+	}
+});</script>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      
+        <div class="item active">
+          <img src="images/A.jpg" width='100%'>
+           <div class="carousel-caption">
+            
+          </div>
+        </div><!-- End Item -->
+ 
+         <div class="item">
+          <img src="images/B.jpg" width='100%'>
+           <div class="carousel-caption">
+            
+          </div>
+        </div><!-- End Item -->
+        
+        <div class="item">
+          <img src="images/C.jpg" width='100%'>
+           <div class="carousel-caption">
+            
+          </div>
+        </div><!-- End Item -->
+        
+        <div class="item">
+          <img src="images/E.jpg" width='100%'>
+           <div class="carousel-caption">
+            
+          </div>
+        </div><!-- End Item -->
+                
+      </div><!-- End Carousel Inner -->
+
+
+    	<ul class="nav nav-pills nav-justified">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#"><b>Howdy!</b><small>Explore Us</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="1"><a href="#"><b>Our Vision</b><small>Learn.Share.Grow</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="2"><a href="#"><b>Blogspace</b><small>Wisdom notes</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="3"><a href="#"><b>Reach Us</b><small>Write to us</small></a></li>
+        </ul>
+
+
+    </div><!-- End Carousel -->
+</div>
+
+
+
+
+
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Search our blogspot"></input>
+              <span class="input-group-btn">
+              <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span> Explore..</a>
+             </span>
+             </div><!-- /input-group -->
+        </div>
+	</div>
+</div>
+<br>
+</div>
+
+
+<br><br><br>
+<div class="container">
+    <div class="page-header text-center">
+        <h1 id="timeline">The Journey...A Timegraph</h1>
+    </div>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="January 2015" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <img class="img-responsive" src="images/DeathtoStock_Wired3.jpg" />
+              
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              
+            </div>
+            
+            <div class="timeline-footer">
+			<a class="pull-right">Click to read more..</a>
+              
+				
+                
+            </div>
+          </div>
+        </li>
+        
+        <li  class="timeline-inverted">
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="February 2015" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <img class="img-responsive" src="images/1.jpg" />
+              
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+             
+            </div>
+            
+            <div class="timeline-footer">
+                <a class="pull-right">Click to read more...</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="March 2015" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <img class="img-responsive" src="http://www.istcoalition.org/filebin/images/Header_Images_1600_x_400/BoardDirectors.Credited.1600x400.png" />
+              
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              
+            </div>
+            
+            <div class="timeline-footer">
+                <a class="pull-right">Click to read more...</a>
+            </div>
+          </div>
+        </li>
+        
+        <li  class="timeline-inverted">
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="Spring 2015" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              
+            </div>
+            
+            <div class="timeline-footer">
+                <a class="pull-right">Click to read more...</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="June 2015" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <img class="img-responsive" src="http://www.databox.net/site/wp-content/uploads/2014/05/DAT1_Slider_1600x400-03.jpg" />
+              
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              
+            </div>
+            
+            <div class="timeline-footer">
+                <a class="pull-right">Click to read more...</a>
+            </div>
+          </div>
+        </li>
+        
+        <li  class="timeline-inverted">
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="August 2015" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <img class="img-responsive" src="http://veratad.com/wp-content/uploads/2014/02/shutterstock_131393735_1600x400.jpg" />
+              
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              
+            </div>
+            
+            <div class="timeline-footer primary">
+            <a class="pull-right">Click to read more...</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+              <p><b>All the credits go to <a href="http://bootsnipp.com/ronnielivingsince1994">ronnielivingsince1994</a></b></p>
+              <p>I only make it responsive and remove the empty spaces to be more like Facebook timeline!</p>
+            </div>
+            
+            <div class="timeline-footer primary">
+                
+                <a class="pull-right">Click to read more...</a>
+            </div>
+          </div>
+        </li>
+        
+        <li class="clearfix" style="float: none;"></li>
+    </ul>
+</div>
+
+<div class="container">
+	<div class="row">
+        <!-- Boxes de Acoes -->
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-thumbs-o-up"></i></div>
+					<div class="info">
+						<h3 class="title">Made with Bootstrap</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+						</p>
+						<div class="more">
+							<a href="#" title="Title Link">
+								Read More <i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-flag"></i></div>
+					<div class="info">
+						<h3 class="title">Icons by Font Awesome</h3>
+    					<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+						</p>
+						<div class="more">
+							<a href="#" title="Title Link">
+								Read More <i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-desktop"></i></div>
+					<div class="info">
+						<h3 class="title">Desktop Friendly</h3>
+    					<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+						</p>
+						<div class="more">
+							<a href="#" title="Title Link">
+								Read More <i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>		    
+		<!-- /Boxes de Acoes -->
+	</div>
+	
+	<div class="container">
+        <div id="main_area">
+                <!-- Slider -->
+                <div class="row">
+                    <div class="col-lg-12" id="slider">
+					        
+                            </div>
+							<div class="col-lg-12" id="featuredArticles">
+							<h1>Featured Articles</h1>
+							</div>
+                        <!-- Top part of the slider -->
+                        <div class="row">
+                            <div class="col-lg-12" id="carousel-bounding-box">
+                                <div class="carousel slide" id="myCarousel2">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item" data-slide-number="0">
+                                        <img src="images/nature-wallpapers-hd.jpg"></div>
+
+                                        <div class="item" data-slide-number="1">
+                                        <img src="images/PZO1119-Wallpaper.jpg"></div>
+
+                                        <div class="item" data-slide-number="2">
+                                        <img src="images/DRAWING ON PHYSICAL MODEL SKETCH SECTION CONCEPT.jpg"></div>
+
+                                        <div class="item" data-slide-number="3">
+                                        <img src="images/slide2.jpg"></div>
+
+                                        <div class="item" data-slide-number="4">
+                                        <img src="images/Phra_Nang_beach_28.jpg"></div>
+
+                                        <div class="item" data-slide-number="5">
+                                        <img src="images/school.jpg"></div>
+                                    </div><!-- Carousel nav -->
+                                    <a class="carousel-control left" data-slide="prev" href="#myCarousel2">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel2">›</a>
+                                
+                                    <div class="col-lg-4" id="carousel-text"></div><!-- /carousel-text-->
+                                </div><!--/div>.myCarousel-->
+                        
+
+                            
+
+                            <div id="slide-content" style="display: none;">
+                                <div id="slide-content-0">
+                                    <h2>Mother Earth</h2>
+                                    <p>- A Glimpse By Randy Savage</p>
+                                    <p class="sub-text">October 24 2015 - <a href="#">Read more</a></p>
+                                </div>
+
+                                <div id="slide-content-1">
+                                    <h2>The Big War</h2>
+                                    <p>Fighting Your Inner Demons</p>
+                                    <p class="sub-text">Decemeber 19 2015 - <a href="#">Read more</a></p>
+                                </div>
+
+                                <div id="slide-content-2">
+                                    <h2>Goal Setting</h2>
+                                    <p>Understanding The Power Of Visualization</p>
+                                    <p class="sub-text">January 04 2016 - <a href="#">Read more</a></p>
+                                </div>
+
+                                <div id="slide-content-3">
+                                    <h2>Silence</h2>
+                                    <p>Lorem Ipsum Dolor</p>
+                                    <p class="sub-text">March 17 2016 - <a href="#">Read more</a></p>
+                                </div>
+
+                                <div id="slide-content-4">
+                                    <h2>Take The Edge Off!</h2>
+                                    <p>Work Hard, Play Hard</p>
+                                    <p class="sub-text">April 02 2016 - <a href="#">Read more</a></p>
+                                </div>
+
+                                <div id="slide-content-5">
+                                    <h2>Learn Or Run</h2>
+                                    <p>Accelarated Learning</p>
+                                    <p class="sub-text">April 14 2016 - <a href="#">Read more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/Slider-->
+
+               <!-- slider bottom-->
+        </div>
+
+</div>
+	
+	
+	
+	<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+	
+</div>
+<div class="container-fluid">
+<!--paste-->
+<div class="ssb ssb-fixed-l" id="example2">
+			<!-- Twitter -->
+			<a href="http://twitter.com/home?status=http://example.com/" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+			<!-- Facebook -->
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+			<!-- Google+ -->
+			<a href="https://plus.google.com/share?url=http://example.com/" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
+			<!-- StumbleUpon -->
+			<a href="http://www.stumbleupon.com/submit?url=http://example.com/" title="Share on StumbleUpon" target="_blank" data-placement="top" class="btn btn-stumbleupon"><i class="fa fa-stumbleupon"></i> Stumbleupon</a>
+			<!-- LinkedIn -->
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary=http://example.com/" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
+		</div>
+
+</div>
+
+
+
+</body>
+</html>
+
+
+<!-- update 
+
+ <div class="row hidden-phone" id="slider-thumbs">
+                    <div class="col-lg-12">
+                         Bottom switcher of slider 
+
+                        <ul class="thumbnails">
+                            <li class="col-lg-span2">
+                                <a class="thumbnail" id="carousel-selector-0"><img src="images/rsz_1nature-wallpapers-hd.jpg"></a>
+                            </li>
+
+                            <li class="col-lg-span2">
+                                <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/170x100&text=two"></a>
+                            </li>
+
+                            <li class="col-lg-span2">
+                                <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=three"></a>
+                            </li>
+
+                            <li class="col-lg-span2">
+                                <a class="thumbnail" id="carousel-selector-3"><img src="http://placehold.it/170x100&text=four"></a>
+                            </li>
+
+                            <li class="col-lg-span2">
+                                <a class="thumbnail" id="carousel-selector-4"><img src="http://placehold.it/170x100&text=five"></a>
+                            </li>
+
+                            <li class="col-lg-span2">
+                                <a class="thumbnail" id="carousel-selector-5"><img src="http://placehold.it/170x100&text=six"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+-- >
